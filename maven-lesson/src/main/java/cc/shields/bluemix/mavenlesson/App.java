@@ -14,10 +14,7 @@ public class App {
         ServerSocket ss = new ServerSocket(port); 
         while (true) { 
             Socket s = ss.accept(); 
-            s.getOutputStream() 
-                    .write(("HTTP/1.1 200 OK\nContent-Type:
-text/html; charset=utf-8\nContent-Length: 2\n\n" +
-veryComplicatedMethod()) .getBytes()); 
+            s.getOutputStream().write(("HTTP/1.1 200 OK\nContent-Type:text/html; charset=utf-8\nContent-Length: 2\n\n" + veryComplicatedMethod()).getBytes()); 
         } 
     } 
 
